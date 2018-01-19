@@ -39,7 +39,7 @@ pipeline {
       }
     }
     steps{
-      sh 'pip install nose nosexconver'
+      sh 'pip install nose nosexcover'
       sh 'nosetests -with-xcoverage --with-xunit'
       sh 'pwd'
       sh 'ls'
