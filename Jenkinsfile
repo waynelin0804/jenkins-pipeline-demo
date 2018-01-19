@@ -32,7 +32,7 @@ pipeline {
         }
       } 
     }
-  stage('unit test'){
+  stage('Unit Test'){
     agent {
       docker {
         image 'python:3.5.4-alpine'
