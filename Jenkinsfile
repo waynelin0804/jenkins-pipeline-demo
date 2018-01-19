@@ -6,6 +6,7 @@ pipeline {
       steps {
         sh 'echo hello!!!'
         sh 'echo webhook test!!!'
+        sh 'echo from dev!'
       }
     }
   }
