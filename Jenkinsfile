@@ -30,7 +30,26 @@ pipeline {
         always {
           sh 'docker stop $BUILD_TAG'
         }
+      } 
     }
+  stage('unit test'){
+    agent {
+      docker {
+        image 'python:3.5.4-alpine'
+      }
     }
+    steps{
+      sh 'pip install nose nosexconver'
+      sh 'nosetests -with-xcoverage --with-xunit'
+      sh 'pwd'
+      sh 'ls'
+    }
+    post {
+      always {
+        junit '*.xml'
+      }
+    }
+  }
+    
   }
 }
