@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         sh 'echo hello!!!'
-        sh 'echo webhook test!!!'
+        sh 'echo webhook test (dev)!!!'
         sh 'echo from dev!'
       }
     }
